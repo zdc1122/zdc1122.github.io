@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>第 2 页 | 听雪楼主</title>
+  <meta name="author" content="zdc">
+  
+  <meta name="description" content="love life love live">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="听雪楼主"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="听雪楼主" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">听雪楼主</a></h1>
+  <h2><a href="/">love life love live</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-04-09T02:21:15.000Z"><a href="/2013/04/09/c语言关键字2extern/">4月 9 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/04/09/c语言关键字2extern/">C语言关键字(2)——extern</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
+<p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
+<p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
+<p>//stu.c</p>
+<h1>include “stdio.h”</h1>
+<p>int num = 2; //extern可以省略  <p>//main.c</p>
+<h1>include “stdio.h”</h1>
+<p>int main()<br>{<br>&nbsp;&nbsp;&nbsp; extern int num; //声明要使用的外部变量，前面一定要加上extern<br>&nbsp;&nbsp;&nbsp; printf(&quot;%d\n&quot;,num);<br>&nbsp;&nbsp;&nbsp; return 0;<br>}</p>
+<p>程序运行结果为：2<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/04/09/c语言关键字2extern/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-04-08T09:02:35.000Z"><a href="/2013/04/08/c语言关键字1static/">4月 8 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/04/08/c语言关键字1static/">C语言关键字(1)——static</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>1、全局静态变量</p>
+<p>在全局变量前加上static，该全局变量就被定义为全局静态变量。</p>
+<p>与全局变量相比，全局静态变量的特点有：</p>
+<p>1）未初始化的全局静态变量会被程序自动初始化为0，并且存在静态存储区</p>
+<p>2）全局静态变量的作用域为该文件，其它文件不可使用该变量</p>
+<p>例如：现有test1.c和main.c两个文件</p>
+<p>//test1.c</p>
+<p>int i = 10;<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/04/08/c语言关键字1static/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-01-26T03:58:46.000Z"><a href="/2013/01/26/svpwm扇区计算，abc开关顺序/">1月 26 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/01/26/svpwm扇区计算，abc开关顺序/">SVPWM扇区计算，abc开关顺序</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><table border="0" cellspacing="0" cellpadding="2" width="400"> <tbody> <tr> <td valign="top" width="57"> </p>
+<p>扇区<br></td> <td valign="top" width="57"> </p>
+<p>Ⅰ<br></td> <td valign="top" width="57"> </p>
+<p>Ⅱ<br></td> <td valign="top" width="57"> </p>
+<p>Ⅲ<br></td> <td valign="top" width="57"> </p>
+<p>Ⅳ<br></td> <td valign="top" width="57"> </p>
+<p>Ⅴ<br></td> <td valign="top" width="57"> </p>
+<p>Ⅵ<br></td></tr> <tr> <td valign="top" width="57"> </p>
+<p>扇区<br></td> <td valign="top" width="57"> </p>
+<p>U<sub>0</sub>,U<sub>60</sub><br></td> <td valign="top" width="57"> </p>
+<p>U<sub>60</sub>,U<sub>120</sub><br></td> <td valign="top" width="57"> </p>
+<p>U<sub>120</sub>,U<sub>180</sub><br></td> <td valign="top" width="57"> </p>
+<p>U<sub>180</sub>,U<sub>240</sub><br></td> <td valign="top" width="57"> </p>
+<p>U<sub>240</sub>,U<sub>300</sub><br></td> <td valign="top" width="57"> </p>
+<p>U<sub>300</sub>,U<sub>0</sub><br></td></tr> <tr> <td valign="top" width="57">N</td> <td valign="top" width="57">3</td> <td valign="top" width="57">1</td> <td valign="top" width="57">5</td> <td valign="top" width="57">4</td> <td valign="top" width="57">6</td> <td valign="top" width="57">2</td></tr> <tr> <td valign="top" width="57">t1</td> <td valign="top" width="57">-Z</td> <td valign="top" width="57">Z</td> <td valign="top" width="57">X</td> <td valign="top" width="57">-X</td> <td valign="top" width="57">-Y</td> <td valign="top" width="57">Y</td></tr> <tr> <td valign="top" width="57">t2</td> <td valign="top" width="57">X</td> <td valign="top" width="57">Y</td> <td valign="top" width="57">-Y</td> <td valign="top" width="57">Z</td> <td valign="top" width="57">-Z</td> <td valign="top" width="57">-X</td></tr> <tr> <td valign="top" width="57">Ta</td> <td valign="top" width="57">a</td> <td valign="top" width="57">b</td> <td valign="top" width="57">c</td> <td valign="top" width="57">c</td> <td valign="top" width="57">b</td> <td valign="top" width="57">a</td></tr> <tr> <td valign="top" width="57">Tb</td> <td valign="top" width="57">b</td> <td valign="top" width="57">a</td> <td valign="top" width="57">a</td> <td valign="top" width="57">b</td> <td valign="top" width="57">c</td> <td valign="top" width="57">c</td></tr> <tr> <td valign="top" width="57">Tc</td> <td valign="top" width="57">c</td> <td valign="top" width="57">c</td> <td valign="top" width="57">b</td> <td valign="top" width="57">a</td> <td valign="top" width="57">a</td> <td valign="top" width="57">b</td></tr></tbody></table> 
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/01/26/svpwm扇区计算，abc开关顺序/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-11-06T10:33:12.000Z"><a href="/2012/11/06/c语言预处理命令常见问题/">11月 6 2012</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/11/06/c语言预处理命令常见问题/">C语言预处理命令常见问题</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>一、宏定义#define</p>
+<p>宏定义就是用一个字符来表示一个字符串，让程序更简明，同时也便于修改,如#define PI 3.1415926 这样的都很常见，也不会产生什么问题，容易出现问题的就是带参数的宏定义，例如</p>
+<h1>define S（x） x*x</h1>
+<p>如果x=10，很明显S(10)=10<em>10；但是如果说x=a+b，此时S(x)=a+b</em>a+b，显然和我们预想的不一样，如果这样定义，则可以达到目的</p>
+<h1>define S(x) (x)*(x)</h1>
+<p>当x=a+b时，则S(x)=(a+b)*(a+b)，这样就和预想的一样了。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2012/11/06/c语言预处理命令常见问题/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-23T11:11:00.000Z"><a href="/2012/09/23/signaltap使用（1）/">9月 23 2012</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/09/23/signaltap使用（1）/">SignalTap使用（1）</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在quartus II中，我们可以使用其软件内部再带的SignalTap II Logic Analyzer，观测器实时信号波形，下面就来说如何使用。</p>
+<p>1、将程序编译之后，在菜单栏上点击“Tools”，选择“SignalTap II Logic Analyzer”然后就出现一个新窗口。</p>
+<p>2、在弹出的新窗口中，点击Steup（在中级白色区域下面），在Steup区域中，双击，然后出现个“Node Finder”的窗口，在Filter中，可以选择需要什么类的信号，在Look in中，可以选择想要观测的模块的内部信号。然后点击List，会在Nodes Found中列出各种型号管脚或者寄存器，对于我们需要观测的，双击，则会在右边Selected Nodes里面列出，选择完之后，点击OK即可。</p>
+<p>3、这时在Steup区域，列出我们需要观测的信号，开始设置触发条件。在“Trigger Conditions”下面选择“Basic”，然后在触发信号后面设置触发条件，不需要触发的，可以将“Trigger Enable”方框中勾去掉即可。</p>
+<p>4、设置完之后，在右边的Signal Configuration中，选择Clock，其频率要高于观测信号频率的2倍，在sample depth中选择深度，在Type中选择Continuous即可。</p>
+<iframe height="192" src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21145&amp;authkey=AGNnDmMYPTouAFs" frameborder="0" width="319" scrolling="no"></iframe>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+<nav id="pagination">
+  
+    <a href="/" class="alignleft prev">上一页</a>
+  
+  
+    <a href="/page/3/" class="alignright next">下一页</a>
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/DSP/">DSP</a><small>1</small></li>
+  
+    <li><a href="/categories/FPGA/">FPGA</a><small>5</small></li>
+  
+    <li><a href="/categories/Matlab/">Matlab</a><small>1</small></li>
+  
+    <li><a href="/categories/个人随笔/">个人随笔</a><small>2</small></li>
+  
+    <li><a href="/categories/健康生活/">健康生活</a><small>1</small></li>
+  
+    <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
+  
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
+  
+    <li><a href="/categories/编程语言/">编程语言</a><small>3</small></li>
+  
+    <li><a href="/categories/Matlab/编程语言/">编程语言</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/JTAG AS/">JTAG AS</a><small>1</small></li>
+  
+    <li><a href="/tags/Matlab S Z 双线性/">Matlab S Z 双线性</a><small>1</small></li>
+  
+    <li><a href="/tags/SVPWM/">SVPWM</a><small>1</small></li>
+  
+    <li><a href="/tags/U盘 硬盘 win7 USB/">U盘 硬盘 win7 USB</a><small>1</small></li>
+  
+    <li><a href="/tags/c extern/">c extern</a><small>1</small></li>
+  
+    <li><a href="/tags/define ifdef ifndef/">define ifdef ifndef</a><small>1</small></li>
+  
+    <li><a href="/tags/office visio win7 quartus altium/">office visio win7 quartus altium</a><small>1</small></li>
+  
+    <li><a href="/tags/pdf 虚拟打印机/">pdf 虚拟打印机</a><small>1</small></li>
+  
+    <li><a href="/tags/quartus FPGA 创建/">quartus FPGA 创建</a><small>1</small></li>
+  
+    <li><a href="/tags/static c/">static c</a><small>1</small></li>
+  
+    <li><a href="/tags/usb blaster jtag internal/">usb blaster jtag internal</a><small>1</small></li>
+  
+    <li><a href="/tags/win7 wifi/">win7 wifi</a><small>1</small></li>
+  
+    <li><a href="/tags/奇分频 FPGA/">奇分频 FPGA</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 zdc
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

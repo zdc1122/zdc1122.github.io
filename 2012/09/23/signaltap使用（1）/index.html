@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档：2013 | 听雪楼主</title>
+  <title>SignalTap使用（1） | 听雪楼主</title>
   <meta name="author" content="zdc">
   
   <meta name="description" content="love life love live">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="SignalTap使用（1）"/>
   <meta property="og:site_name" content="听雪楼主"/>
 
   
@@ -43,109 +43,63 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2013</h2>
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-23T11:11:00.000Z"><a href="/2012/09/23/signaltap使用（1）/">9月 23 2012</a></time>
+      
+      
+  
+    <h1 class="title">SignalTap使用（1）</h1>
+  
 
-
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-07-07T02:40:06.000Z"><a href="/2013/07/07/常用软件下载/">7月 7 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/07/07/常用软件下载/">常用软件下载</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-04-26T08:46:50.000Z"><a href="/2013/04/26/s域到z域双线性变换/">4月 26 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/04/26/s域到z域双线性变换/">S域到Z域双线性变换</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-04-25T01:42:02.000Z"><a href="/2013/04/25/u盘硬盘安装win7方法/">4月 25 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/04/25/u盘硬盘安装win7方法/">U盘/硬盘安装Win7方法</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-04-19T08:17:34.000Z"><a href="/2013/04/19/pdf虚拟打印机/">4月 19 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/04/19/pdf虚拟打印机/">PDF虚拟打印机</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-04-11T08:12:34.000Z"><a href="/2013/04/11/fpga奇分频的实现/">4月 11 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/04/11/fpga奇分频的实现/">FPGA奇分频的实现</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-04-09T02:21:15.000Z"><a href="/2013/04/09/c语言关键字2extern/">4月 9 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/04/09/c语言关键字2extern/">C语言关键字(2)——extern</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-04-08T09:02:35.000Z"><a href="/2013/04/08/c语言关键字1static/">4月 8 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/04/08/c语言关键字1static/">C语言关键字(1)——static</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-01-26T03:58:46.000Z"><a href="/2013/01/26/svpwm扇区计算，abc开关顺序/">1月 26 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/01/26/svpwm扇区计算，abc开关顺序/">SVPWM扇区计算，abc开关顺序</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+    </header>
+    <div class="entry">
+      
+        <p>在quartus II中，我们可以使用其软件内部再带的SignalTap II Logic Analyzer，观测器实时信号波形，下面就来说如何使用。</p>
+<p>1、将程序编译之后，在菜单栏上点击“Tools”，选择“SignalTap II Logic Analyzer”然后就出现一个新窗口。</p>
+<p>2、在弹出的新窗口中，点击Steup（在中级白色区域下面），在Steup区域中，双击，然后出现个“Node Finder”的窗口，在Filter中，可以选择需要什么类的信号，在Look in中，可以选择想要观测的模块的内部信号。然后点击List，会在Nodes Found中列出各种型号管脚或者寄存器，对于我们需要观测的，双击，则会在右边Selected Nodes里面列出，选择完之后，点击OK即可。</p>
+<p>3、这时在Steup区域，列出我们需要观测的信号，开始设置触发条件。在“Trigger Conditions”下面选择“Basic”，然后在触发信号后面设置触发条件，不需要触发的，可以将“Trigger Enable”方框中勾去掉即可。</p>
+<p>4、设置完之后，在右边的Signal Configuration中，选择Clock，其频率要高于观测信号频率的2倍，在sample depth中选择深度，在Type中选择Continuous即可。</p>
+<iframe height="192" src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21145&amp;authkey=AGNnDmMYPTouAFs" frameborder="0" width="319" scrolling="no"></iframe>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/FPGA/">FPGA</a>
   </div>
+
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
