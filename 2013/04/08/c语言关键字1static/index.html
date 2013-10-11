@@ -59,50 +59,59 @@
     </header>
     <div class="entry">
       
-        <p>1、全局静态变量</p>
+        <p><strong>1、全局静态变量</strong></p>
 <p>在全局变量前加上static，该全局变量就被定义为全局静态变量。</p>
 <p>与全局变量相比，全局静态变量的特点有：</p>
 <p>1）未初始化的全局静态变量会被程序自动初始化为0，并且存在静态存储区</p>
 <p>2）全局静态变量的作用域为该文件，其它文件不可使用该变量</p>
 <p>例如：现有test1.c和main.c两个文件</p>
-<p>//test1.c</p>
-<p>int i = 10;<br><a id="more"></a></p>
-<p>//main.c</p>
-<p>extern int i; //使用全局变量前，必须加extern声明</p>
-<p>int main( )</p>
-<p>{</p>
-<p>printf(“%d\n”,i);</p>
-<p>}</p>
+<pre><code><span class="comment">//test1.c</span>
+
+<span class="keyword">int</span> i = <span class="number">10</span>;</code></pre>
+<a id="more"></a>
+
+<pre><code><span class="comment">//main.c</span>
+
+<span class="keyword">extern</span> <span class="keyword">int</span> i; <span class="comment">//使用全局变量前，必须加extern声明</span>
+<span class="keyword">int</span> main( )
+{
+    printf(“%d\n”,i);
+}</code></pre>
 <p>输出结果为：10</p>
 <p>如果将test1.c修改为</p>
-<p>static int i = 10;</p>
+<pre><code><span class="keyword">static</span> <span class="keyword">int</span> i = <span class="number">10</span>;</code></pre>
 <p>则mian.c文件不可使用test1.c中的i。</p>
 <p>因此，在变量前加上static可以防止外部文件修改和访问，并且两个文件出现相同变量名时也不会产生冲突。</p>
-<p>2、局部静态变量</p>
+<p><strong>2、局部静态变量</strong></p>
 <p>在局部变量前加static，可以保持局部变量的长久。局部静态变量只在程序刚开始运行的时候完成初始化，并且有且只有一次初始化。如</p>
-<p>int fun(void)</p>
-<p>{</p>
-<p>static int num = 100;</p>
-<p>return num—;</p>
-<p>}</p>
-<p>int main( )</p>
-<p>{</p>
-<p>int i;</p>
-<p>for(i = 0; i &lt; 3; i++)</p>
-<p>{</p>
-<p>printf(“%d\n”,fun());</p>
-<p>}</p>
-<p>return 0;</p>
-<p>}</p>
+<pre><code><span class="keyword">int</span> fun(void)
+{
+    static <span class="keyword">int</span> num = <span class="number">100</span>;
+    <span class="keyword">return</span> num—;
+}
+
+<span class="keyword">int</span> main( )
+{
+    <span class="keyword">int</span> i;
+    <span class="keyword">for</span>(i = <span class="number">0</span>; i &amp;<span class="keyword">lt</span>; <span class="number">3</span>; i++)
+    {
+         <span class="keyword">printf</span>(“<span class="variable">%d</span>\n”,fun());
+    }
+<span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
 <p>程序运行结果为：</p>
-<p>100</p>
-<p>99</p>
-<p>98</p>
+<pre><code><span class="number">100</span>
+
+<span class="number">99</span>
+
+<span class="number">98</span></code></pre>
 <p>如果将static去掉，则程序运行结果为：</p>
-<p>100</p>
-<p>100</p>
-<p>100</p>
-<p>3、静态函数</p>
+<pre><code><span class="number">100</span>
+
+<span class="number">100</span>
+
+<span class="number">100</span></code></pre>
+<p><strong>3、静态函数</strong></p>
 <p>在一个工程中，会有多个源文件，默认情况下各个源文件的函数是全局的。如</p>
 <p>在test1.h中声明一个函数：void fun();</p>
 <p>在main.c文件中，只要加入#include”test1.h”，就可以调用fun()函数。</p>

@@ -60,14 +60,16 @@
     </header>
     <div class="entry">
       
-        <p>1、全局静态变量</p>
+        <p><strong>1、全局静态变量</strong></p>
 <p>在全局变量前加上static，该全局变量就被定义为全局静态变量。</p>
 <p>与全局变量相比，全局静态变量的特点有：</p>
 <p>1）未初始化的全局静态变量会被程序自动初始化为0，并且存在静态存储区</p>
 <p>2）全局静态变量的作用域为该文件，其它文件不可使用该变量</p>
 <p>例如：现有test1.c和main.c两个文件</p>
-<p>//test1.c</p>
-<p>int i = 10;<br>
+<pre><code><span class="comment">//test1.c</span>
+
+<span class="keyword">int</span> i = <span class="number">10</span>;</code></pre>
+
       
     </div>
     <footer>
