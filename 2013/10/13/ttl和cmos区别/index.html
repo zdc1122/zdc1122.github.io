@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>FPGA奇分频的实现 | 听雪楼主</title>
+  <title>TTL和CMOS区别 | 听雪楼主</title>
   <meta name="author" content="zdc">
   
   <meta name="description" content="love life love live">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="FPGA奇分频的实现"/>
+  <meta property="og:title" content="TTL和CMOS区别"/>
   <meta property="og:site_name" content="听雪楼主"/>
 
   
@@ -49,26 +49,23 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-04-11T08:12:34.000Z"><a href="/2013/04/11/fpga奇分频的实现/">4月 11 2013</a></time>
+        <time datetime="2013-10-12T16:50:08.000Z"><a href="/2013/10/13/ttl和cmos区别/">10月 13 2013</a></time>
       
       
   
-    <h1 class="title">FPGA奇分频的实现</h1>
+    <h1 class="title">TTL和CMOS区别</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>在FPGA或CPLD里面，经常会用到分频模块。偶分频很容易实现，而奇分频相对复杂点，本文介绍两种奇分频的方法，生成占空比为50%频率为N(奇数)信号。</p>
-<p><strong>第一种方法设计思路：</strong></p>
-<p>分别用两个计数器cnt_up，cnt_down，当检测到输入时钟的上升沿时cnt_up加1，检测到输入时钟的下降沿时cnt_down加1。</p>
-<p>1、当cnt_down=(N-1)/2 + 1时，输出时钟翻转一次<br><a id="more"></a></p>
-<p>2、当cnt_up=N时，输出时钟再次翻转一次，同时将两个计数器都复位，即cnt_up=0，cnt_down=0，重新开始计数，变可生成占空比为50%的频率为N的信号。</p>
-<p><strong>第二种方法设计思路：</strong></p>
-<p>在生成占空比为50%频率为N(奇数)信号之前，看下如何生成占空比为(N-1)/(2N)的频率为N的信号clk1。</p>
-<p>设计思路：每检测到输入时钟的上升沿，计数器cnt加1，当cnt=(N-1)/2时，输出信号clk1翻转一次；当cnt=N时，输出信号clk1再次翻转一次，同时计数器复位cnt=0，开始重新计数，如此重复就可以生成占空比为(N-1)/(2N)的频率为N的信号clk1。</p>
-<p>信号clk1是根据检测输入时钟上升沿而生成，同理，可以检测输入时钟下降沿方式来生成占空比为(N-1)/(2N)的频率为N的信号clk2(其实clk1和clk2在示波器上观察只是相位不同)。</p>
-<p>然后将clk1和clk2相或，即可生成占空比为50%的频率为N的信号。</p>
+        <h1>一、定义</h1>
+<p>TTL集成电路的全名是晶体管-晶体管逻辑集成电路（Transistor-Transistor Logic），主要有54/74系列标准TTL、高速型TTL（HTTL）、低功耗型TTL（LTTL）、肖特基型TTL（S-TTL）、低功耗肖特基型TTL（LSTTL）五个系列。<br>CMOS集成电路全名是互补金属-氧化物-半导体场效应管（Complementary metal-oxide-semiconductor）。<br>TTL电路的电平就叫TTL电平，CMOS电路的电平就叫CMOS电平。</p>
+<h1>二、标准电平</h1>
+<p>TTL电平：<br>输出：低电平小于0.4V，高电平高于2.4V<br>输入：低电平小于0.8V，高电平高于2.0V<br>CMOS电平：<br>输出：低电平小于0.1Vcc，高电平高与0.9Vcc<br>输入：低电平小于0.3Vcc，高电平高于0.7Vcc</p>
+<p>对于5V的TTL电平，在室温情况下，一般输出高电平是3.5V，输出低电平是0.2V；输入高电平高于2.0V，输入点电平小于0.2V；噪声容限是0.4V。<br>CMOS的逻辑高电平电压接近于电源电压，低电平电压接近于0.</p>
+<h1>三、TTL与CMOS电路比较</h1>
+<p>(1)TTL集成电路功耗大，驱动能力强，一般提供25mA的驱动电流；CMOS集成电路功耗低，与输入的信号频率有关，工作电压范围大，一般提供10mA左右驱动电流。<br>(2)TTL是电流控制器件，一般需要2.5mA的输入电流；CMOS是电压控制器件，几乎不需要电流输入。<br>(3)TTL电路速度快，传输延时时间短（5-10ns）；CMOS速度慢，传输时间较长（25-50ns）。<br>(4)CMOS锁定效应：CMOS电路由于输入太大的电流，内部电流急剧增加，除非切断电源，否则一直在增加。当产生锁定效应时，内部电流达到40mA以上时，就会烧毁芯片。对此可以采取以下措施：<br>    a、在输入端和输出端加钳位电路，使输入和输出不超过规定电压；<br>    b、芯片的电源输入端加入去耦电容，防止VDD出现瞬间的高压；<br>    c、在VDD与外电源之间加入限流电阻，防止电流过大。<br>(5)当系统又几个电源供电时，电源的开关按照以下顺序：开启顺序，先开启CMOS电路，再开启输入信号和负载电源；关闭顺序正好相反。<br>(6)CMOS电路注意事项：<br>    a、CMOS电路是电压控制器件，输入阻抗很大，对干扰信号的扑捉能力很强，因此不用的管脚不能悬空，要通过上拉或者下拉给定一个电平；<br>    b、输入端接低内阻的信号时，在输入端与信号之间加限流电阻，使输入的电流限制在1mA以内；<br>    c、接长信号传输线时，在CMOS电路端接匹配电阻；<br>    d、在输入端接大电容时，应该在输入端和电容之间接保护电阻，保护电阻的组值R=Vo/1mA，Vo为外界电容上的电压；<br>    e、CMOS输入电流超过1mA时，可能会烧坏CMOS。<br>(7)TTL门电路中输入端负载特性<br>    a、悬空时相当于输入端接高电平；<br>    b、输入端接的串联电阻小于910欧姆的时候，输入的低电平信号才能被门电路识别，否则输入端门电路一直呈现高电平；</p>
 
       
     </div>
@@ -77,13 +74,13 @@
         
   
   <div class="categories">
-    <a href="/categories/常用算法/">常用算法</a>
+    <a href="/categories/硬件设计/">硬件设计</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/奇分频 FPGA/">奇分频 FPGA</a>
+    <a href="/tags/TTL CMOS/">TTL CMOS</a>
   </div>
 
         
