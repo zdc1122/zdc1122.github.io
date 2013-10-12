@@ -50,56 +50,6 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-04-09T02:21:15.000Z"><a href="/2013/04/09/c语言关键字2extern/">4月 9 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/04/09/c语言关键字2extern/">C语言关键字(2)——extern</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
-<p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
-<p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
-<pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#include "stdio.h"  </span>
-<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern可以省略  </span>
-
-<span class="comment">//main.c</span>
-<span class="preprocessor">#include "stdio.h"</span>
-<span class="keyword">int</span> main()
-{
-     extern <span class="keyword">int</span> num; <span class="comment">//声明要使用的外部变量，前面一定要加上extern</span>
-     printf(<span class="string">"%d\n"</span>,num);
-     <span class="keyword">return</span> <span class="number">0</span>;
-}</code></pre>
-<p>程序运行结果为：2<br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/04/09/c语言关键字2extern/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
         <time datetime="2013-04-08T09:02:35.000Z"><a href="/2013/04/08/c语言关键字1static/">4月 8 2013</a></time>
       
       
@@ -314,6 +264,42 @@
     </div>
     <footer>
       
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-17T13:34:00.000Z"><a href="/2012/09/17/遇见未知的自己/">9月 17 2012</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/09/17/遇见未知的自己/">遇见未知的自己</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>记得小时候，问我们的梦想是什么的时候，都说是科学家，警察等等，我想那个时候这个的却是我们那时的梦想，后来长大了，在询问梦想的时候，还是小时候那个梦想的，应该是很少的了，这和环境以及成长有关。</p>
+<p>成长的过程中，最快乐的时候应该不是超越竞争对手，而是超越自己，但是在超越竞争对手的同时其实也是在超越自己，这个是相辅相成的，关键就是看你怎么去看待，这是种心态。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2012/09/17/遇见未知的自己/#more" class="more-link">Read More</a>
+          </div>
         
         
       

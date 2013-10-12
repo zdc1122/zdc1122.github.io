@@ -50,38 +50,6 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-10-12T16:03:08.000Z"><a href="/2013/10/13/t1/">10月 13 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/10/13/t1/">t1</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p><img src="http://ww3.sinaimg.cn/large/82e0a727gw1e9iuc6zy4wj21400p0gq2.jpg" alt="我的图片"></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
         <time datetime="2013-04-26T08:46:50.000Z"><a href="/2013/04/26/s域到z域双线性变换/">4月 26 2013</a></time>
       
       
@@ -124,7 +92,7 @@
     </header>
     <div class="entry">
       
-        <p><strong>通过U盘安装</strong>  <p>1、下载Windows7-USB-DVD-tool，并安装。下载点击<a href="http://pan.baidu.com/share/link?shareid=389550&amp;uk=456472238" target="_blank">U盘安装</a>。  <p>2、打开软件，点击Browse，选择系统镜像文件，然后点击Next。 <iframe height="169" src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21212&amp;authkey=AGQGYURhcCVN5FE" frameborder="0" width="320" scrolling="no"></iframe> <p><br>
+        <p><strong>通过U盘安装</strong><br>1、下载Windows7-USB-DVD-tool，并安装。下载点击<a href="http://pan.baidu.com/share/link?shareid=389550&amp;uk=456472238" target="_blank">U盘安装</a>。<br>2、打开软件，点击Browse，选择系统镜像文件，然后点击Next。<br><img src="http://ww3.sinaimg.cn/large/82e0a727gw1e9iva5bl4cj20fs08cdg5.jpg" alt=""><br>
       
     </div>
     <footer>
@@ -203,6 +171,56 @@
         
           <div class="alignleft">
             <a href="/2013/04/11/fpga奇分频的实现/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-04-09T02:21:15.000Z"><a href="/2013/04/09/c语言关键字2extern/">4月 9 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/04/09/c语言关键字2extern/">C语言关键字(2)——extern</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
+<p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
+<p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
+<pre><code><span class="comment">//stu.c</span>
+<span class="preprocessor">#include "stdio.h"  </span>
+<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern可以省略  </span>
+
+<span class="comment">//main.c</span>
+<span class="preprocessor">#include "stdio.h"</span>
+<span class="keyword">int</span> main()
+{
+     extern <span class="keyword">int</span> num; <span class="comment">//声明要使用的外部变量，前面一定要加上extern</span>
+     printf(<span class="string">"%d\n"</span>,num);
+     <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+<p>程序运行结果为：2<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/04/09/c语言关键字2extern/#more" class="more-link">Read More</a>
           </div>
         
         
