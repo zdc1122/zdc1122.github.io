@@ -46,6 +46,75 @@
     <div id="main-col" class="alignleft"><div id="wrapper">
   <article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-04-08T09:02:35.000Z"><a href="/2013/04/08/c-keyword-1-static/">4月 8 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/04/08/c-keyword-1-static/">C语言关键字(1)——static</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><strong>1、全局静态变量</strong></p>
+<p>在全局变量前加上static，该全局变量就被定义为全局静态变量。</p>
+<p>与全局变量相比，全局静态变量的特点有：</p>
+<p>1）未初始化的全局静态变量会被程序自动初始化为0，并且存在静态存储区</p>
+<p>2）全局静态变量的作用域为该文件，其它文件不可使用该变量</p>
+<p>例如：现有test1.c和main.c两个文件</p>
+<pre><code>//test1.c
+
+int i = 10;
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2013/04/08/c-keyword-1-static/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -80,6 +149,18 @@
 
   <article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -96,10 +177,11 @@
       
         <p>一、宏定义#define</p>
 <p>宏定义就是用一个字符来表示一个字符串，让程序更简明，同时也便于修改,如#define PI 3.1415926 这样的都很常见，也不会产生什么问题，容易出现问题的就是带参数的宏定义，例如</p>
-<h1>define S（x） x*x</h1>
+<h1 id="define-s-x-x-x">define S（x） x*x</h1>
 <p>如果x=10，很明显S(10)=10<em>10；但是如果说x=a+b，此时S(x)=a+b</em>a+b，显然和我们预想的不一样，如果这样定义，则可以达到目的</p>
-<h1>define S(x) (x)*(x)</h1>
-<p>当x=a+b时，则S(x)=(a+b)*(a+b)，这样就和预想的一样了。<br>
+<h1 id="define-s-x-x-x-">define S(x) (x)*(x)</h1>
+<p>当x=a+b时，则S(x)=(a+b)*(a+b)，这样就和预想的一样了。
+
       
     </div>
     <footer>
@@ -120,6 +202,18 @@
 
 
   <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
   
   <div class="post-content">
     <header>
@@ -158,6 +252,18 @@
 
   <article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -173,7 +279,8 @@
     <div class="entry">
       
         <p>记得小时候，问我们的梦想是什么的时候，都说是科学家，警察等等，我想那个时候这个的却是我们那时的梦想，后来长大了，在询问梦想的时候，还是小时候那个梦想的，应该是很少的了，这和环境以及成长有关。</p>
-<p>成长的过程中，最快乐的时候应该不是超越竞争对手，而是超越自己，但是在超越竞争对手的同时其实也是在超越自己，这个是相辅相成的，关键就是看你怎么去看待，这是种心态。<br>
+<p>成长的过程中，最快乐的时候应该不是超越竞争对手，而是超越自己，但是在超越竞争对手的同时其实也是在超越自己，这个是相辅相成的，关键就是看你怎么去看待，这是种心态。
+
       
     </div>
     <footer>
@@ -182,41 +289,6 @@
           <div class="alignleft">
             <a href="/2012/09/17/遇见未知的自己/#more" class="more-link">Read More</a>
           </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2012-09-12T10:19:00.000Z"><a href="/2012/09/12/usb-blaster-driver-install/">9月 12 2012</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2012/09/12/usb-blaster-driver-install/">USB blaster驱动安装</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>装驱动就很简单了， Quartus II 的文件夹已经带了驱动程序。当你把下载线一头插到电脑的USB口，弹出硬件安装向导，你给指下路径就可以了。例如我这的路径是D:\altera\91sp2\quartus\drivers\usb-blaster</p>
-<p>然后点击工具栏上的Programmer，在出来界面中，点击Hardware Steup，选择USB blaster，点击Close。然后点击Auto Detect，这时会在右边方框中显示出相应的器件和配置芯片，此时表示驱动安装成功。</p>
-<p>在Hardware Steup，找不到USB blaster，点击Add Hardware，<br>提示“Attempted to access JTAG server — internal error code 82 occurred”，<br>一般和防火墙和杀毒软件有关，如果关掉防火墙和杀毒软件还是不行，就把杀毒软件卸载掉，我是这么解决的。</p>
-
-      
-    </div>
-    <footer>
-      
         
         
       
@@ -259,7 +331,7 @@
   
     <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
   
-    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
   
     <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
   
@@ -273,7 +345,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
+    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/word/" style="font-size: NaNpx;">word</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
   </div>
 </div>
 
@@ -282,7 +354,7 @@
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 zdc
+  &copy; 2014 zdc
   
 </div>
 <div class="clearfix"></div></footer>

@@ -45,6 +45,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -62,39 +74,41 @@
         <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
 <p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
 <p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
-<pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#include "stdio.h"  </span>
-<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern可以省略  </span>
+<pre><code>//stu.c
+#include &quot;stdio.h&quot;  
+int num = 2; //extern可以省略  
 
-<span class="comment">//main.c</span>
-<span class="preprocessor">#include "stdio.h"</span>
-<span class="keyword">int</span> main()
+//main.c
+#include &quot;stdio.h&quot;
+int main()
 {
-     extern <span class="keyword">int</span> num; <span class="comment">//声明要使用的外部变量，前面一定要加上extern</span>
-     printf(<span class="string">"%d\n"</span>,num);
-     <span class="keyword">return</span> <span class="number">0</span>;
-}</code></pre>
-<p>程序运行结果为：2<br><a id="more"></a></p>
+     extern int num; //声明要使用的外部变量，前面一定要加上extern
+     printf(&quot;%d\n&quot;,num);
+     return 0;
+}
+</code></pre><p>程序运行结果为：2
+<a id="more"></a></p>
 <p><em>当一个文件要定义或使用外部文件中的变量时，需要在定义或使用前用extern关键字声明其为外部变量。</em></p>
 <p><strong>2、引用外部全局变量(使用“.h”文件)</strong></p>
-<p>一般情况下，模块化程序文件，提供一个.c文件和对应的一个.h文件，如stu.c和stu.h<br>在stu.h文件中声明变量num</p>
-<pre><code><span class="comment">//stu.h</span>
-<span class="keyword">int</span> num;</code></pre>
-<p>在stu.c文件中赋值，同时包含stu.h</p>
-<pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#include "stdio.h"</span>
-<span class="preprocessor">#include"stu.h"  //包含stu.h</span>
-num = <span class="number">2</span>;  </code></pre>
-<p>现在要在main.c文件中使用num的值，则只需在其头文件中包含stu.h</p>
-<pre><code><span class="comment">//main.c  </span>
-<span class="preprocessor">#include "stdio.h"  </span>
-<span class="preprocessor">#include "stu.h" //包含stu.h  </span>
-<span class="keyword">int</span> main()  
+<p>一般情况下，模块化程序文件，提供一个.c文件和对应的一个.h文件，如stu.c和stu.h
+在stu.h文件中声明变量num</p>
+<pre><code>//stu.h
+int num;
+</code></pre><p>在stu.c文件中赋值，同时包含stu.h</p>
+<pre><code>//stu.c
+#include &quot;stdio.h&quot;
+#include&quot;stu.h&quot;  //包含stu.h
+num = 2;  
+</code></pre><p>现在要在main.c文件中使用num的值，则只需在其头文件中包含stu.h</p>
+<pre><code>//main.c  
+#include &quot;stdio.h&quot;  
+#include &quot;stu.h&quot; //包含stu.h  
+int main()  
 {  
-      printf(<span class="string">"%d\n"</span>,num);  
-      <span class="keyword">return</span> <span class="number">0</span>;  
-}  </code></pre>
-<p>程序运行结果为：2<br>该方法只需增加一个.h文件，在该文件中声明所要使用的变量，然后在.c文件中的头文件中包含即可，不需要在使用前加以特别声明。<em>  <p>以上两种方法都可以在一个文件中使用外部变量，该方法同样适用于结构体和函数。  <p></em>一般情况下，在实际工程中使用第二种方法，尤其对于结构体和函数。如在stu.h文件中声明，在stu.c文件中定义，如果main.c文件需要使用，只需在其头文件中包含对应的stu.h文件即可。_</p>
+      printf(&quot;%d\n&quot;,num);  
+      return 0;  
+}  
+</code></pre><p>程序运行结果为：2<br>该方法只需增加一个.h文件，在该文件中声明所要使用的变量，然后在.c文件中的头文件中包含即可，不需要在使用前加以特别声明。<em>  <p>以上两种方法都可以在一个文件中使用外部变量，该方法同样适用于结构体和函数。  <p></em>一般情况下，在实际工程中使用第二种方法，尤其对于结构体和函数。如在stu.h文件中声明，在stu.c文件中定义，如果main.c文件需要使用，只需在其头文件中包含对应的stu.h文件即可。_</p>
 <p><u><strong>以上对于VC环境验证无误，但是在CCS3.3中，存在部分不同点，具体有待验证。</strong></u></p>
 
       
@@ -177,7 +191,7 @@ var duoshuoQuery = {short_name:"dechao"};
   
     <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
   
-    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
   
     <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
   
@@ -191,7 +205,7 @@ var duoshuoQuery = {short_name:"dechao"};
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
+    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/word/" style="font-size: NaNpx;">word</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
   </div>
 </div>
 
@@ -200,7 +214,7 @@ var duoshuoQuery = {short_name:"dechao"};
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 zdc
+  &copy; 2014 zdc
   
 </div>
 <div class="clearfix"></div></footer>

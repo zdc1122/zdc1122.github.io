@@ -46,6 +46,67 @@
     <div id="main-col" class="alignleft"><div id="wrapper">
   <article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-04-26T08:46:50.000Z"><a href="/2013/04/26/s-to-z-bilinear-transformation/">4月 26 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/04/26/s-to-z-bilinear-transformation/">S域到Z域双线性变换</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在Matlab中，c2d函数可以实现S域到Z域双线性变换，
+但是如果要在DSP中实现双线性变换，就需要通过一般形式来表达,然后在DSP中去实现，
+在求Z域的表达式时，对于高阶次的，计算量大，因此本人在Matlab中编写了一个M文件，
+通过编写的函数，只需输入分子分母的阶次即可计算出相关系数，
+具体的M文件和使用说明<a href="http://pan.baidu.com/share/link?shareid=391879&amp;uk=456472238" target="_blank">点此下载</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -60,7 +121,9 @@
     </header>
     <div class="entry">
       
-        <p><strong>通过U盘安装</strong><br>1、下载Windows7-USB-DVD-tool，并安装。下载点击<a href="http://pan.baidu.com/share/link?shareid=389550&amp;uk=456472238" target="_blank">U盘安装</a>。<br>2、打开软件，点击Browse，选择系统镜像文件，然后点击Next。<br><img src="http://ww3.sinaimg.cn/large/82e0a727gw1e9iva5bl4cj20fs08cdg5.jpg" alt=""><br>
+        <p><strong>通过U盘安装</strong><br>1、下载Windows7-USB-DVD-tool，并安装。下载点击<a href="http://pan.baidu.com/share/link?shareid=389550&amp;uk=456472238" target="_blank">U盘安装</a>。<br>2、打开软件，点击Browse，选择系统镜像文件，然后点击Next。
+<img src="http://ww3.sinaimg.cn/large/82e0a727gw1e9iva5bl4cj20fs08cdg5.jpg" alt="">
+
       
     </div>
     <footer>
@@ -81,6 +144,18 @@
 
 
   <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
   
   <div class="post-content">
     <header>
@@ -116,6 +191,18 @@
 
   <article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -133,7 +220,8 @@
         <p>在FPGA或CPLD里面，经常会用到分频模块。偶分频很容易实现，而奇分频相对复杂点，本文介绍两种奇分频的方法，生成占空比为50%频率为N(奇数)信号。</p>
 <p><strong>第一种方法设计思路：</strong></p>
 <p>分别用两个计数器cnt_up，cnt_down，当检测到输入时钟的上升沿时cnt_up加1，检测到输入时钟的下降沿时cnt_down加1。</p>
-<p>1、当cnt_down=(N-1)/2 + 1时，输出时钟翻转一次<br>
+<p>1、当cnt_down=(N-1)/2 + 1时，输出时钟翻转一次
+
       
     </div>
     <footer>
@@ -155,6 +243,18 @@
 
   <article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -172,19 +272,20 @@
         <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
 <p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
 <p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
-<pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#include "stdio.h"  </span>
-<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern可以省略  </span>
+<pre><code>//stu.c
+#include &quot;stdio.h&quot;  
+int num = 2; //extern可以省略  
 
-<span class="comment">//main.c</span>
-<span class="preprocessor">#include "stdio.h"</span>
-<span class="keyword">int</span> main()
+//main.c
+#include &quot;stdio.h&quot;
+int main()
 {
-     extern <span class="keyword">int</span> num; <span class="comment">//声明要使用的外部变量，前面一定要加上extern</span>
-     printf(<span class="string">"%d\n"</span>,num);
-     <span class="keyword">return</span> <span class="number">0</span>;
-}</code></pre>
-<p>程序运行结果为：2<br>
+     extern int num; //声明要使用的外部变量，前面一定要加上extern
+     printf(&quot;%d\n&quot;,num);
+     return 0;
+}
+</code></pre><p>程序运行结果为：2
+
       
     </div>
     <footer>
@@ -192,51 +293,6 @@
         
           <div class="alignleft">
             <a href="/2013/04/09/c-keyword-2-extern/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-04-08T09:02:35.000Z"><a href="/2013/04/08/c-keyword-1-static/">4月 8 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/04/08/c-keyword-1-static/">C语言关键字(1)——static</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p><strong>1、全局静态变量</strong></p>
-<p>在全局变量前加上static，该全局变量就被定义为全局静态变量。</p>
-<p>与全局变量相比，全局静态变量的特点有：</p>
-<p>1）未初始化的全局静态变量会被程序自动初始化为0，并且存在静态存储区</p>
-<p>2）全局静态变量的作用域为该文件，其它文件不可使用该变量</p>
-<p>例如：现有test1.c和main.c两个文件</p>
-<pre><code><span class="comment">//test1.c</span>
-
-<span class="keyword">int</span> i = <span class="number">10</span>;</code></pre>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/04/08/c-keyword-1-static/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -280,7 +336,7 @@
   
     <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
   
-    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
   
     <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
   
@@ -294,7 +350,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
+    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/word/" style="font-size: NaNpx;">word</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
   </div>
 </div>
 
@@ -303,7 +359,7 @@
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 zdc
+  &copy; 2014 zdc
   
 </div>
 <div class="clearfix"></div></footer>

@@ -45,6 +45,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -62,7 +74,8 @@
         <p>在FPGA或CPLD里面，经常会用到分频模块。偶分频很容易实现，而奇分频相对复杂点，本文介绍两种奇分频的方法，生成占空比为50%频率为N(奇数)信号。</p>
 <p><strong>第一种方法设计思路：</strong></p>
 <p>分别用两个计数器cnt_up，cnt_down，当检测到输入时钟的上升沿时cnt_up加1，检测到输入时钟的下降沿时cnt_down加1。</p>
-<p>1、当cnt_down=(N-1)/2 + 1时，输出时钟翻转一次<br><a id="more"></a></p>
+<p>1、当cnt_down=(N-1)/2 + 1时，输出时钟翻转一次
+<a id="more"></a></p>
 <p>2、当cnt_up=N时，输出时钟再次翻转一次，同时将两个计数器都复位，即cnt_up=0，cnt_down=0，重新开始计数，变可生成占空比为50%的频率为N的信号。</p>
 <p><strong>第二种方法设计思路：</strong></p>
 <p>在生成占空比为50%频率为N(奇数)信号之前，看下如何生成占空比为(N-1)/(2N)的频率为N的信号clk1。</p>
@@ -150,7 +163,7 @@ var duoshuoQuery = {short_name:"dechao"};
   
     <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
   
-    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
   
     <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
   
@@ -164,7 +177,7 @@ var duoshuoQuery = {short_name:"dechao"};
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
+    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/word/" style="font-size: NaNpx;">word</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
   </div>
 </div>
 
@@ -173,7 +186,7 @@ var duoshuoQuery = {short_name:"dechao"};
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 zdc
+  &copy; 2014 zdc
   
 </div>
 <div class="clearfix"></div></footer>

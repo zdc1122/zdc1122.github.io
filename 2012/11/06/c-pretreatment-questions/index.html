@@ -45,6 +45,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -61,10 +73,11 @@
       
         <p>一、宏定义#define</p>
 <p>宏定义就是用一个字符来表示一个字符串，让程序更简明，同时也便于修改,如#define PI 3.1415926 这样的都很常见，也不会产生什么问题，容易出现问题的就是带参数的宏定义，例如</p>
-<h1>define S（x） x*x</h1>
+<h1 id="define-s-x-x-x">define S（x） x*x</h1>
 <p>如果x=10，很明显S(10)=10<em>10；但是如果说x=a+b，此时S(x)=a+b</em>a+b，显然和我们预想的不一样，如果这样定义，则可以达到目的</p>
-<h1>define S(x) (x)*(x)</h1>
-<p>当x=a+b时，则S(x)=(a+b)*(a+b)，这样就和预想的一样了。<br><a id="more"></a> </p>
+<h1 id="define-s-x-x-x-">define S(x) (x)*(x)</h1>
+<p>当x=a+b时，则S(x)=(a+b)*(a+b)，这样就和预想的一样了。
+<a id="more"></a> </p>
 <p>二、文件包含</p>
 <p>我们会经常看到#include&lt;stdio.h&gt;和#include”stdio.h”这样两种书写方式，这两种方式都是合法的，区别就是用尖括号时，系统到存放C库函数头文件目录中寻找包含的文件，这种称为标准方式。用双引号时，系统先在用户当前目录中寻找要包含的文件，若找不到，再按标准方式来查找。一般调用库函数用尖括号，而调用自己编写的文件用双引号，如自己编写的文件不在当前目录，需要加上路径，如#include”D:\ex\ex1.h”。</p>
 <p>三、条件编译</p>
@@ -89,8 +102,8 @@
 <p>如果这组条件编译命令之前曾出现了 #define DEBUG&nbsp; 1，在编译时就编译printf(“This is debug mode”)，如果出现#define DEBUG&nbsp; 0，在编译时就编译printf(“This is not debug mode”)。</p>
 <p>采用条件编译，可以减少被编译的语句，从而减少目标程序的长度，减少运行时间，同时也给调试带来了很大的方便，另外在程序的移植等方面也带来很大的灵活性。</p>
 <p>在DSP的开发中，在其头文件中会看到如下类似的条件编译</p>
-<h1>ifndef DSP2833x_DMA_H</h1>
-<h1>define DSP2833x_DMA_H  <p>代码  <p>#endif</h1>
+<h1 id="ifndef-dsp2833x_dma_h">ifndef DSP2833x_DMA_H</h1>
+<h1 id="define-dsp2833x_dma_h-p-p-endif">define DSP2833x_DMA_H  <p>代码  <p>#endif</h1>
 <p>这样的话，可以防止该头文件被重复的编译，影响编译时间等。</p>
 
       
@@ -173,7 +186,7 @@ var duoshuoQuery = {short_name:"dechao"};
   
     <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
   
-    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
   
     <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
   
@@ -187,7 +200,7 @@ var duoshuoQuery = {short_name:"dechao"};
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
+    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/word/" style="font-size: NaNpx;">word</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
   </div>
 </div>
 
@@ -196,7 +209,7 @@ var duoshuoQuery = {short_name:"dechao"};
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 zdc
+  &copy; 2014 zdc
   
 </div>
 <div class="clearfix"></div></footer>

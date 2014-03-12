@@ -45,6 +45,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -70,13 +82,18 @@
 <a id="more"></a>
 
 <p><strong>接下来就是具体操作了：</strong></p>
-<p>1.打开WIN7开始菜单，在左下角的框上输入CMD，搜索出来的CMD.EXE对着它右键，选择以“管理员身份运行”。<br>2.依次输入以下代码，红色部分，每输入完一次点击一次回车键</p>
-<p>（1）netsh wlan set hostednetwork mode=allow<br>承载网络模式设置为允许<br>（2）netsh wlan set hostednetwork ssid=mywifi key=123456789 设置一个名字为mywifi的无线接入点，接入点密码为123456789（3）netsh wlan start hostednetwork</p>
+<p>1.打开WIN7开始菜单，在左下角的框上输入CMD，搜索出来的CMD.EXE对着它右键，选择以“管理员身份运行”。
+2.依次输入以下代码，红色部分，每输入完一次点击一次回车键</p>
+<p>（1）netsh wlan set hostednetwork mode=allow
+承载网络模式设置为允许
+（2）netsh wlan set hostednetwork ssid=mywifi key=123456789 设置一个名字为mywifi的无线接入点，接入点密码为123456789（3）netsh wlan start hostednetwork</p>
 <p>启动承载网络</p>
 <p>如图：</p>
 <p><a href="http://www.flickr.com/photos/64811190@N05/6907083445/" title="1" target="_blank"><img src="http://static.flickr.com/7066/6907083445_a1539f5633.jpg" alt="1"></a></p>
 <p>然后点击任务栏的网络图标，如果出现下图的mywifi接入点，恭喜您建立成功</p>
-<p><a href="http://www.flickr.com/photos/64811190@N05/6907083679/" title="2" target="_blank"><img src="http://static.flickr.com/7036/6907083679_d278faa1b5.jpg" alt="2"></a><br>接下来可能还需要一些设置<br>进入“网络和共享中心”在这个位置把两个网络（一个是自己建立的mywifi无线链接，一个是已经联网的，我的是宽带）都设置为家庭网络</p>
+<p><a href="http://www.flickr.com/photos/64811190@N05/6907083679/" title="2" target="_blank"><img src="http://static.flickr.com/7036/6907083679_d278faa1b5.jpg" alt="2"></a>
+接下来可能还需要一些设置
+进入“网络和共享中心”在这个位置把两个网络（一个是自己建立的mywifi无线链接，一个是已经联网的，我的是宽带）都设置为家庭网络</p>
 <p>如图</p>
 <p><a href="http://www.flickr.com/photos/64811190@N05/6907084777/" title="3" target="_blank"><img src="http://static.flickr.com/7189/6907084777_52737cd978.jpg" alt="3"></a></p>
 <p>&nbsp;</p>
@@ -96,10 +113,14 @@
 <p>打开网络共享中心，双击无线网络链接2（就是mywifi的连接），然后点击属性</p>
 <p><a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0154_thumb.gif" title="clip_image015[4]" target="_blank">![clip_image015[4]</a>](<a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0154.gif" target="_blank">http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0154.gif</a>)</p>
 <p>再在如上图中下拉双击选择“Internet 协议版本 4（TCP/IPv4）” 如下图</p>
-<p><a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0174_thumb.gif" title="clip_image017[4]" target="_blank">![clip_image017[4]</a>](<a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0174.gif" target="_blank">http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0174.gif</a>)<br>IP和子网掩码按照上图填写。而DNS就根据您自己已经链接的那个链接的详细信息里面的Ip V4 DNS服务器上的填写。我的是宽带链接，点击宽带链接——》详细信息，照着填写就可以了</p>
+<p><a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0174_thumb.gif" title="clip_image017[4]" target="_blank">![clip_image017[4]</a>](<a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0174.gif" target="_blank">http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0174.gif</a>)
+IP和子网掩码按照上图填写。而DNS就根据您自己已经链接的那个链接的详细信息里面的Ip V4 DNS服务器上的填写。我的是宽带链接，点击宽带链接——》详细信息，照着填写就可以了</p>
 <p>如图</p>
 <p><a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0184_thumb.jpg" title="clip_image018[4]" target="_blank">![clip_image018[4]</a>](<a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0184.jpg" target="_blank">http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0184.jpg</a>)</p>
-<p>电脑上的设置就到这里了。接下来是手机设置<br>在手机待机桌面上按菜单键—设置—无线和网络—WLAN 设置—按菜单键—高级—使用静态IP—IP地址（192.168.2.2)—网关（192.168.2.1）—网络掩码（255.255.255.0）—域名1（你电脑上的第一个DNS）—域名2（你电脑上的第二个DNS）—返回键<br><a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0194_thumb.jpg" title="clip_image019[4]" target="_blank">![clip_image019[4]</a>](<a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0194.jpg" target="_blank">http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0194.jpg</a>)<br>现在，你可以连接名称为mywifi密码是123456789的WIFI接入点了</p>
+<p>电脑上的设置就到这里了。接下来是手机设置
+在手机待机桌面上按菜单键--设置--无线和网络--WLAN 设置--按菜单键--高级--使用静态IP--IP地址（192.168.2.2)--网关（192.168.2.1）--网络掩码（255.255.255.0）--域名1（你电脑上的第一个DNS）--域名2（你电脑上的第二个DNS）--返回键
+<a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0194_thumb.jpg" title="clip_image019[4]" target="_blank">![clip_image019[4]</a>](<a href="http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0194.jpg" target="_blank">http://blog.zhaoyue.info/zqxjd-content/uploads/2012/02/clip_image0194.jpg</a>)
+现在，你可以连接名称为mywifi密码是123456789的WIFI接入点了</p>
 
       
     </div>
@@ -181,7 +202,7 @@ var duoshuoQuery = {short_name:"dechao"};
   
     <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
   
-    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
   
     <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
   
@@ -195,7 +216,7 @@ var duoshuoQuery = {short_name:"dechao"};
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
+    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/word/" style="font-size: NaNpx;">word</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
   </div>
 </div>
 
@@ -204,7 +225,7 @@ var duoshuoQuery = {short_name:"dechao"};
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 zdc
+  &copy; 2014 zdc
   
 </div>
 <div class="clearfix"></div></footer>

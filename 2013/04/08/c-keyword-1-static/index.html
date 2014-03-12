@@ -45,6 +45,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -65,53 +77,53 @@
 <p>1）未初始化的全局静态变量会被程序自动初始化为0，并且存在静态存储区</p>
 <p>2）全局静态变量的作用域为该文件，其它文件不可使用该变量</p>
 <p>例如：现有test1.c和main.c两个文件</p>
-<pre><code><span class="comment">//test1.c</span>
+<pre><code>//test1.c
 
-<span class="keyword">int</span> i = <span class="number">10</span>;</code></pre>
-<a id="more"></a>
+int i = 10;
+</code></pre><a id="more"></a>
 
-<pre><code><span class="comment">//main.c</span>
+<pre><code>//main.c
 
-<span class="keyword">extern</span> <span class="keyword">int</span> i; <span class="comment">//使用全局变量前，必须加extern声明</span>
-<span class="keyword">int</span> main( )
+extern int i; //使用全局变量前，必须加extern声明
+int main( )
 {
     printf(“%d\n”,i);
-}</code></pre>
-<p>输出结果为：10</p>
+}
+</code></pre><p>输出结果为：10</p>
 <p>如果将test1.c修改为</p>
-<pre><code><span class="keyword">static</span> <span class="keyword">int</span> i = <span class="number">10</span>;</code></pre>
-<p>则mian.c文件不可使用test1.c中的i。</p>
+<pre><code>static int i = 10;
+</code></pre><p>则mian.c文件不可使用test1.c中的i。</p>
 <p>因此，在变量前加上static可以防止外部文件修改和访问，并且两个文件出现相同变量名时也不会产生冲突。</p>
 <p><strong>2、局部静态变量</strong></p>
 <p>在局部变量前加static，可以保持局部变量的长久。局部静态变量只在程序刚开始运行的时候完成初始化，并且有且只有一次初始化。如</p>
-<pre><code><span class="keyword">int</span> fun(void)
+<pre><code>int fun(void)
 {
-    static <span class="keyword">int</span> num = <span class="number">100</span>;
-    <span class="keyword">return</span> num—;
+    static int num = 100;
+    return num—;
 }
 
-<span class="keyword">int</span> main( )
+int main( )
 {
-    <span class="keyword">int</span> i;
-    <span class="keyword">for</span>(i = <span class="number">0</span>; i &amp;<span class="keyword">lt</span>; <span class="number">3</span>; i++)
+    int i;
+    for(i = 0; i &amp;lt; 3; i++)
     {
-         <span class="keyword">printf</span>(“<span class="variable">%d</span>\n”,fun());
+         printf(“%d\n”,fun());
     }
-<span class="keyword">return</span> <span class="number">0</span>;
-}</code></pre>
-<p>程序运行结果为：</p>
-<pre><code><span class="number">100</span>
+return 0;
+}
+</code></pre><p>程序运行结果为：</p>
+<pre><code>100
 
-<span class="number">99</span>
+99
 
-<span class="number">98</span></code></pre>
-<p>如果将static去掉，则程序运行结果为：</p>
-<pre><code><span class="number">100</span>
+98
+</code></pre><p>如果将static去掉，则程序运行结果为：</p>
+<pre><code>100
 
-<span class="number">100</span>
+100
 
-<span class="number">100</span></code></pre>
-<p><strong>3、静态函数</strong></p>
+100
+</code></pre><p><strong>3、静态函数</strong></p>
 <p>在一个工程中，会有多个源文件，默认情况下各个源文件的函数是全局的。如</p>
 <p>在test1.h中声明一个函数：void fun();</p>
 <p>在main.c文件中，只要加入#include”test1.h”，就可以调用fun()函数。</p>
@@ -199,7 +211,7 @@ var duoshuoQuery = {short_name:"dechao"};
   
     <li><a href="/categories/旅行点滴/">旅行点滴</a><small>3</small></li>
   
-    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>4</small></li>
   
     <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
   
@@ -213,7 +225,7 @@ var duoshuoQuery = {short_name:"dechao"};
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
+    <a href="/tags/20岁 10年/" style="font-size: NaNpx;">20岁 10年</a><a href="/tags/E-96 电阻/" style="font-size: NaNpx;">E-96 电阻</a><a href="/tags/JTAG AS/" style="font-size: NaNpx;">JTAG AS</a><a href="/tags/Matlab S Z 双线性/" style="font-size: NaNpx;">Matlab S Z 双线性</a><a href="/tags/PCB/" style="font-size: NaNpx;">PCB</a><a href="/tags/SVPWM/" style="font-size: NaNpx;">SVPWM</a><a href="/tags/TTL CMOS/" style="font-size: NaNpx;">TTL CMOS</a><a href="/tags/U盘 硬盘 win7 USB/" style="font-size: NaNpx;">U盘 硬盘 win7 USB</a><a href="/tags/c extern/" style="font-size: NaNpx;">c extern</a><a href="/tags/define ifdef ifndef/" style="font-size: NaNpx;">define ifdef ifndef</a><a href="/tags/pdf 虚拟打印机/" style="font-size: NaNpx;">pdf 虚拟打印机</a><a href="/tags/quartus FPGA 创建/" style="font-size: NaNpx;">quartus FPGA 创建</a><a href="/tags/static c/" style="font-size: NaNpx;">static c</a><a href="/tags/usb blaster jtag internal/" style="font-size: NaNpx;">usb blaster jtag internal</a><a href="/tags/win7 wifi/" style="font-size: NaNpx;">win7 wifi</a><a href="/tags/word/" style="font-size: NaNpx;">word</a><a href="/tags/奇分频 FPGA/" style="font-size: NaNpx;">奇分频 FPGA</a>
   </div>
 </div>
 
@@ -222,7 +234,7 @@ var duoshuoQuery = {short_name:"dechao"};
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 zdc
+  &copy; 2014 zdc
   
 </div>
 <div class="clearfix"></div></footer>
